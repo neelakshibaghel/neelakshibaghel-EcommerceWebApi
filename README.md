@@ -62,7 +62,7 @@ Flushes Redis cache after deletion.
 
 4. API Payload Examples
 4.1 Store Request Payload (POST /products)
-
+url- http://127.0.0.1:8000/api/store-products
 {
   "ClientName": "Client A",
   "ProductName": "Product X",
@@ -73,7 +73,7 @@ Flushes Redis cache after deletion.
 }
 
 4.2 Update Request Payload (PUT /products)
-
+url- http://127.0.0.1:8000/api/update-products
 {
   "id": 1,
   "ClientName": "Client A",
@@ -85,12 +85,22 @@ Flushes Redis cache after deletion.
 }
 
 4.3 Delete Request Payload (DELETE /products)
-
+url - http://127.0.0.1:8000/api/delete-products
 {
   "id": 1
 }
 
-5. API Routes
+4.3 List Request Payload (DELETE /products)
+url - http://127.0.0.1:8000/api/products-list
+{
+  "Id": 1,
+  "Name": "",
+  "Status": ""
+}
+
+5. UI Show Routs
+ url - http://127.0.0.1:8000/products-ui
+6. API Routes
 
 - GET /products
   - Fetch list of products. Optional filters: Id, Name, Status
@@ -103,4 +113,6 @@ Flushes Redis cache after deletion.
 
 - DELETE /products
   - Soft delete product by ID
+ 
+
 
